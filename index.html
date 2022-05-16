@@ -8,12 +8,128 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,500;0,600;0,700;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
-
-    <title>Oh my food</title>
+    <title>Oh My Food</title>
   </head>
-
+  <header>
+    <!--Flèche de retour-->
+    <a class="go-back" href="index.html">
+      <i class="fa-solid fa-arrow-left"></i>
+    </a>
+    <!--Logo-->
+    <a class="logo" href="index.html">
+      <h1>ohmyfood</h1>
+    </a>
+  </header>
+  <main class="home-main">
+    <section class="top-page">
+      <!--Localisation-->
+      <div class="button-block">
+        <div class="location">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Paris, Belleville</h3>
+        </div>
+        <!--Introduction-->
+        <div class="intro">
+          <h2>Réservez le menu qui vous convient</h2>
+          <h3>
+            Découvrez des restaurants d'exception, sélectionnés par nos soins
+          </h3>
+          <input type="button" value="Explorer nos restaurants" />
+        </div>
+      </div>
+      <!--Fonctionnement-->
+      <div class="how-to">
+        <h2 class="how-to-title">Fonctionnement</h2>
+        <div class="how-to-block">
+          <div class="block-digit">1</div>
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <h3 class="block-text">Choisissez un restaurant</h3>
+        </div>
+        <div class="how-to-block">
+          <div class="block-digit">2</div>
+          <i class="fa-solid fa-list"></i>
+          <h3 class="block-text">Composez votre menu</h3>
+        </div>
+        <div class="how-to-block">
+          <div class="block-digit">3</div>
+          <i class="fa-solid fa-store"></i>
+          <h3 class="block-text">Dégustez au restaurant</h3>
+        </div>
+      </div>
+    </section>
+    <!--Liste des restaurants-->
+    <section class="restaurants-list">
+      <h2 class="restaurants-title"></h2>
+      <!--Carte restaurant 1-->
+      <div class="restaurant-card">
+        <div class="restaurant-picture">
+          <img
+            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="restaurant-info">
+          <h3>La palette du goût</h3>
+          <h4>Ménilmontant</h4>
+        </div>
+      </div>
+      <!--Carte restaurant 2-->
+      <div class="restaurant-card">
+        <div class="restaurant-picture">
+          <img
+            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="restaurant-info">
+          <h3>La note enchantée</h3>
+          <h4>Charonne</h4>
+        </div>
+      </div>
+      <!--Carte restaurant 3-->
+      <div class="restaurant-card">
+        <div class="restaurant-picture">
+          <img
+            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="restaurant-info">
+          <h3>À la française</h3>
+          <h4>Cité Rouge</h4>
+        </div>
+      </div>
+      <!--Carte restaurant 4-->  
+      <div class="restaurant-card">
+        <div class="restaurant-picture">
+          <img
+            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <div class="restaurant-info">
+          <h3>Le délice des sens</h3>
+          <h4>Folie-Méricourt</h4>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!--Footer-->
+  <footer>
+    <h3>ohmyfood</h3>
+    <ul>
+      <a href="index.html"><li><i class="fa-solid fa-utensils"></i><h4>Proposer un restaurant</h4></li></a>
+      <a href="index.html"><li><i class="fa-solid fa-handshake-angle"></i><h4>Devenir partenaire</h4></li></a>
+      <a href="#"><li></li></a>
+      <a href="mailto:bouthorsv@gmail.com"><li></li></a>
+    </ul>
+  </footer>
 </html>
