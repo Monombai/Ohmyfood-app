@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,118 +19,168 @@
     />
     <title>Oh My Food</title>
   </head>
-  <header>
-    <!--Flèche de retour-->
-    <a class="go-back" href="index.html">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
-    <!--Logo-->
-    <a class="logo" href="index.html">
-      <h1>ohmyfood</h1>
-    </a>
+<body>
+  <header class="home-header">
+    <!--Flèche de retour + Logo-->
+    <div class="header-content">
+      <a class="go-back" href="index.html">
+        <i class="fa-solid fa-arrow-left no-show"></i>
+      </a>
+      <a class="logo" href="index.html">
+        <h1>ohmyfood</h1>
+      </a>
+    </div>
   </header>
   <main class="home-main">
     <section class="top-page">
       <!--Localisation-->
       <div class="button-block">
         <div class="location">
-          <i class="fa-solid fa-location-dot"></i>
-          <h3>Paris, Belleville</h3>
+          <h3><i class="fa-solid fa-location-dot"></i>Paris, Belleville</h3>
         </div>
         <!--Introduction-->
         <div class="intro">
+          <div class="intro-texts">
           <h2>Réservez le menu qui vous convient</h2>
           <h3>
             Découvrez des restaurants d'exception, sélectionnés par nos soins
           </h3>
-          <input type="button" value="Explorer nos restaurants" />
+          <a href="#restaurants-list"><input type="button" value="Explorer nos restaurants" /></a>
+          </div>
         </div>
       </div>
       <!--Fonctionnement-->
-      <div class="how-to">
-        <h2 class="how-to-title">Fonctionnement</h2>
-        <div class="how-to-block">
-          <div class="block-digit">1</div>
-          <i class="fa-solid fa-mobile-screen-button"></i>
-          <h3 class="block-text">Choisissez un restaurant</h3>
+      <div class="how-to-box">
+        <div class="how-to">
+          <h2 class="how-to-title">Fonctionnement</h2>
+          <div class="how-to-block">
+            <div class="block-content">
+              <h3 class="block-digit">1</h3>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            <!--</div>-->
+            <h3 class="block-text">Choisissez un restaurant</h3>
+            </div>
+          </div>
+          <div class="how-to-block">
+            <div class="block-content">
+              <h3 class="block-digit">2</h3>
+              <i class="fa-solid fa-list"></i>  
+              <h3 class="block-text">Composez votre menu</h3>
+            </div>  
+          </div>
+          <div class="how-to-block">
+            <div class="block-content">
+              <h3 class="block-digit">3</h3>
+              <i class="fa-solid fa-store"></i>
+              <h3 class="block-text">Dégustez au restaurant</h3>
+            </div>  
+          </div>
         </div>
-        <div class="how-to-block">
-          <div class="block-digit">2</div>
-          <i class="fa-solid fa-list"></i>
-          <h3 class="block-text">Composez votre menu</h3>
-        </div>
-        <div class="how-to-block">
-          <div class="block-digit">3</div>
-          <i class="fa-solid fa-store"></i>
-          <h3 class="block-text">Dégustez au restaurant</h3>
-        </div>
-      </div>
+      </div>  
     </section>
     <!--Liste des restaurants-->
-    <section class="restaurants-list">
-      <h2 class="restaurants-title"></h2>
-      <!--Carte restaurant 1-->
-      <div class="restaurant-card">
-        <div class="restaurant-picture">
-          <img
-            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt=""
-          />
+    <section id="restaurants-list">
+      <h2 class="restaurants-title">Restaurants</h2>
+      <div class="food-cards">
+        <!--Carte restaurant 1-->
+        <div class="restaurant-card">
+          <div class="restaurant-picture">
+            <img
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="La palette du goût"
+            />
+          </div>
+          <div class="restaurant-info">
+            <div class="info-content">
+              <div class="info-text">
+              <h3>La palette du goût</h3>
+              <h4>Ménilmontant</h4>
+              </div>
+              <div class="hearts">
+                <i class="fa-regular fa-heart heart-empty"></i>
+                <i class="fa-solid fa-heart heart-full"></i>
+              </div>
+            </div>  
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3>La palette du goût</h3>
-          <h4>Ménilmontant</h4>
+        <!--Carte restaurant 2-->
+        <div class="restaurant-card">
+          <div class="restaurant-picture">
+            <img
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="La palette du goût"
+            />
+          </div>
+          <div class="restaurant-info">
+            <div class="info-content">
+              <div class="info-text">
+              <h3>La palette du goût</h3>
+              <h4>Ménilmontant</h4>
+              </div>
+              <div class="hearts">
+                <i class="fa-regular fa-heart heart-empty"></i>
+                <i class="fa-solid fa-heart heart-full"></i>
+              </div>
+            </div>  
+          </div>
         </div>
-      </div>
-      <!--Carte restaurant 2-->
-      <div class="restaurant-card">
-        <div class="restaurant-picture">
-          <img
-            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt=""
-          />
+        
+          <!--Carte restaurant 3-->
+          <div class="restaurant-card">
+            <div class="restaurant-picture">
+              <img
+                src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                alt="La palette du goût"
+              />
+            </div>
+            <div class="restaurant-info">
+              <div class="info-content">
+                <div class="info-text">
+                <h3>La palette du goût</h3>
+                <h4>Ménilmontant</h4>
+                </div>
+                <div class="hearts">
+                  <i class="fa-regular fa-heart heart-empty"></i>
+                  <i class="fa-solid fa-heart heart-full"></i>
+                </div>
+              </div>  
+            </div>
+          </div>
+        <!--Carte restaurant 4-->  
+        <div class="restaurant-card">
+          <div class="restaurant-picture">
+            <img
+              src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+              alt="La palette du goût"
+            />
+          </div>
+          <div class="restaurant-info">
+            <div class="info-content">
+              <div class="info-text">
+              <h3>La palette du goût</h3>
+              <h4>Ménilmontant</h4>
+              </div>
+              <div class="hearts">
+              <i class="fa-regular fa-heart heart-empty"></i>
+              <i class="fa-solid fa-heart heart-full"></i>
+              </div>
+            </div>  
+          </div>
         </div>
-        <div class="restaurant-info">
-          <h3>La note enchantée</h3>
-          <h4>Charonne</h4>
-        </div>
-      </div>
-      <!--Carte restaurant 3-->
-      <div class="restaurant-card">
-        <div class="restaurant-picture">
-          <img
-            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div class="restaurant-info">
-          <h3>À la française</h3>
-          <h4>Cité Rouge</h4>
-        </div>
-      </div>
-      <!--Carte restaurant 4-->  
-      <div class="restaurant-card">
-        <div class="restaurant-picture">
-          <img
-            src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-            alt=""
-          />
-        </div>
-        <div class="restaurant-info">
-          <h3>Le délice des sens</h3>
-          <h4>Folie-Méricourt</h4>
-        </div>
-      </div>
+      </div>  
     </section>
   </main>
   <!--Footer-->
   <footer>
-    <h3>ohmyfood</h3>
-    <ul>
-      <a href="index.html"><li><i class="fa-solid fa-utensils"></i><h4>Proposer un restaurant</h4></li></a>
-      <a href="index.html"><li><i class="fa-solid fa-handshake-angle"></i><h4>Devenir partenaire</h4></li></a>
-      <a href="#"><li></li></a>
-      <a href="mailto:bouthorsv@gmail.com"><li></li></a>
-    </ul>
+    <div class="footer-content">
+      <h3>ohmyfood</h3>
+      <ul>
+        <a href="index.html"><li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a>
+        <a href="index.html"><li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li></a>
+        <a href="#"><li>Mentions légales</li></a>
+        <a href="mailto:bouthorsv@gmail.com"><li>Contact</li></a>
+      </ul>
+    </div>
   </footer>
+</body>
 </html>

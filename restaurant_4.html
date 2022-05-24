@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,29 +20,34 @@
     <title>Oh My Food - À la française</title>
   </head>
   <header>
-    <!--Flèche de retour-->
-    <a class="go-back" href="index.html">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
-    <!--Logo-->
-    <a class="logo" href="index.html">
-      <h1>ohmyfood</h1>
-    </a>
+    <!--Flèche de retour + Logo-->
+    <div class="header-content">
+      <a class="go-back" href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <a class="logo" href="index.html">
+        <h1>ohmyfood</h1>
+      </a>
+    </div>
   </header>
   <main class="restaurant-main">
     <!--Photo restaurant-->
-    <div class="restaurant-picture">
+    <div class="restaurant-picture-top">
       <img
         src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
         alt=""
       />
     </div>
     <!--Menu restaurant-->
-    <section class="restaurant-menu">
-      <div class="restaurant-name">
-        <div class="restaurant-name-t"><h2>À la française</h2></div>
-        <div class="restaurant-name-h"><i class="fa-regular fa-heart"></i></div>
-      </div>
+    <section class="restaurants-section">
+      <div class="restaurant-menu">
+        <div class="restaurant-name">
+          <div><h2>À la française</h2></div>
+          <div class="hearts">
+            <i class="fa-regular fa-heart heart-empty"></i>
+            <i class="fa-solid fa-heart heart-full"></i>
+          </div>
+        </div>
         <!--Bloc ENTRÉES-->
       <div class="category-container">
         <div class="menu-category"><h3>ENTRÉES</h3></div>
@@ -123,22 +129,14 @@
 
   <!--Footer-->
   <footer>
-    <h3>ohmyfood</h3>
-    <ul>
-      <a href="index.html"
-        ><li>
-          <i class="fa-solid fa-utensils"></i>
-          <h4>Proposer un restaurant</h4>
-        </li></a
-      >
-      <a href="index.html"
-        ><li>
-          <i class="fa-solid fa-handshake-angle"></i>
-          <h4>Devenir partenaire</h4>
-        </li></a
-      >
-      <a href="#"><li></li></a>
-      <a href="mailto:bouthorsv@gmail.com"><li></li></a>
-    </ul>
+    <div class="footer-content">
+      <h3>ohmyfood</h3>
+      <ul>
+        <a href="index.html"><li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a>
+        <a href="index.html"><li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li></a>
+        <a href="#"><li>Mentions légales</li></a>
+        <a href="mailto:bouthorsv@gmail.com"><li>Contact</li></a>
+      </ul>
+    </div>
   </footer>
 </html>

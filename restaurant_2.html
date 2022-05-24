@@ -8,6 +8,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
     <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,126 +20,123 @@
     <title>Oh My Food - Le délice des sens</title>
   </head>
   <header>
-    <!--Flèche de retour-->
-    <a class="go-back" href="index.html">
-      <i class="fa-solid fa-arrow-left"></i>
-    </a>
-    <!--Logo-->
-    <a class="logo" href="index.html">
-      <h1>ohmyfood</h1>
-    </a>
+    <!--Flèche de retour + Logo-->
+    <div class="header-content">
+      <a class="go-back" href="index.html">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+      <a class="logo" href="index.html">
+        <h1>ohmyfood</h1>
+      </a>
+    </div>
   </header>
   <main class="restaurant-main">
     <!--Photo restaurant-->
-    <div class="restaurant-picture">
+    <div class="restaurant-picture-top">
       <img
         src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
         alt=""
       />
     </div>
     <!--Menu restaurant-->
-    <section class="restaurant-menu">
-      <div class="restaurant-name">
-        <div class="restaurant-name-t"><h2>Le délice des sens</h2></div>
-        <div class="restaurant-name-h"><i class="fa-regular fa-heart"></i></div>
-      </div>
-        <!--Bloc ENTRÉES-->
-      <div class="category-container">
-        <div class="menu-category"><h3>ENTRÉES</h3></div>
-        <div class="meal-container">
-            <h4 class="meal-name">Tartare de thon</h4>
-            <div class="meal-d-and-p">
-            <h5 class="meal-description">Assaisonné au yuzu</h5>
-            <span class="meal-price">25€</span>
+    <section class="restaurants-section">
+        <div class="restaurant-menu">
+          <div class="restaurant-name">
+            <div><h2>Le délice des sens</h2></div>
+            <div class="hearts">
+              <i class="fa-regular fa-heart heart-empty"></i>
+              <i class="fa-solid fa-heart heart-full"></i>
             </div>
-        </div>
-        <div class="meal-container">
-            <h4 class="meal-name">Bouchée de homard croustillant</h4>
-            <div class="meal-d-and-p">
-            <h5 class="meal-description">Et sa farandole de petits légumes</h5>
-            <span class="meal-price">35€</span>
-            </div>
-        </div>    
-        <div class="meal-container">
-            <h4 class="meal-name">Velouté de cèpes</h4>
-            <div class="meal-d-and-p">
-            <h5 class="meal-description">Aux truffes</h5>
-            <span class="meal-price">20€</span>
-            </div>
-        </div>
-        <!--Bloc PLATS-->        
+          </div>
+          <!--Bloc ENTRÉES-->
         <div class="category-container">
-            <div class="menu-category"><h3>PLATS</h3></div>
-            <div class="meal-container">
-                <h4 class="meal-name">Poulet rôti aux herbes de Provence</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">Et sa crème de truffe</h5>
-                <span class="meal-price">40€</span>
-                </div>
-            </div>  
-            <div class="meal-container">
-                <h4 class="meal-name">Langouste rôtie</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">Et ses légumes de saison</h5>
-                <span class="meal-price">35€</span>
-                </div>
-            </div>  
-            <div class="meal-container">
-                <h4 class="meal-name">Côte de boeuf Angus</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">Et sa purée de panais</h5>
-                <span class="meal-price">44€</span>
-                </div>
-            </div>  
-        </div>
-        <!--Bloc DESSERTS-->
-        <div class="category-container">
-            <div class="menu-category"><h3>DESSERTS</h3></div>
-            <div class="meal-container">
-                <h4 class="meal-name">Farandole de desserts</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">Du chef</h5>
-                <span class="meal-price">18€</span>
-                </div>
-            </div>  
-            <div class="meal-container">
-                <h4 class="meal-name">Crème brulée</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">Revisitée</h5>
-                <span class="meal-price">22€</span>
-                </div>
-            </div>  
-            <div class="meal-container">
-                <h4 class="meal-name">Tiramisu</h4>
-                <div class="meal-d-and-p">
-                <h5 class="meal-description">À la noisette</h5>
-                <span class="meal-price">23€</span>
-                </div>
-            </div>  
-        </div>
-        <!--Bouton Commander-->
-        <input type="button" value="COMMANDER"/>
+          <div class="menu-category"><h3>ENTRÉES</h3></div>
+          <div class="meal-container">
+              <h4 class="meal-name">Tartare de thon</h4>
+              <div class="meal-d-and-p">
+              <h5 class="meal-description">Assaisonné au yuzu</h5>
+              <span class="meal-price">25€</span>
+              </div>
+          </div>
+          <div class="meal-container">
+              <h4 class="meal-name">Bouchée de homard croustillant</h4>
+              <div class="meal-d-and-p">
+              <h5 class="meal-description">Et sa farandole de petits légumes</h5>
+              <span class="meal-price">35€</span>
+              </div>
+          </div>    
+          <div class="meal-container">
+              <h4 class="meal-name">Velouté de cèpes</h4>
+              <div class="meal-d-and-p">
+              <h5 class="meal-description">Aux truffes</h5>
+              <span class="meal-price">20€</span>
+              </div>
+          </div>
+          <!--Bloc PLATS-->        
+          <div class="category-container">
+              <div class="menu-category"><h3>PLATS</h3></div>
+              <div class="meal-container">
+                  <h4 class="meal-name">Poulet rôti aux herbes de Provence</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">Et sa crème de truffe</h5>
+                  <span class="meal-price">40€</span>
+                  </div>
+              </div>  
+              <div class="meal-container">
+                  <h4 class="meal-name">Langouste rôtie</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">Et ses légumes de saison</h5>
+                  <span class="meal-price">35€</span>
+                  </div>
+              </div>  
+              <div class="meal-container">
+                  <h4 class="meal-name">Côte de boeuf Angus</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">Et sa purée de panais</h5>
+                  <span class="meal-price">44€</span>
+                  </div>
+              </div>  
+          </div>
+          <!--Bloc DESSERTS-->
+          <div class="category-container">
+              <div class="menu-category"><h3>DESSERTS</h3></div>
+              <div class="meal-container">
+                  <h4 class="meal-name">Farandole de desserts</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">Du chef</h5>
+                  <span class="meal-price">18€</span>
+                  </div>
+              </div>  
+              <div class="meal-container">
+                  <h4 class="meal-name">Crème brulée</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">Revisitée</h5>
+                  <span class="meal-price">22€</span>
+                  </div>
+              </div>  
+              <div class="meal-container">
+                  <h4 class="meal-name">Tiramisu</h4>
+                  <div class="meal-d-and-p">
+                  <h5 class="meal-description">À la noisette</h5>
+                  <span class="meal-price">23€</span>
+                  </div>
+              </div>  
+          </div>
+          <!--Bouton Commander-->
+          <input type="button" value="COMMANDER"/>
     </section>
   </main>
 
   <!--Footer-->
   <footer>
-    <h3>ohmyfood</h3>
-    <ul>
-      <a href="index.html"
-        ><li>
-          <i class="fa-solid fa-utensils"></i>
-          <h4>Proposer un restaurant</h4>
-        </li></a
-      >
-      <a href="index.html"
-        ><li>
-          <i class="fa-solid fa-handshake-angle"></i>
-          <h4>Devenir partenaire</h4>
-        </li></a
-      >
-      <a href="#"><li></li></a>
-      <a href="mailto:bouthorsv@gmail.com"><li></li></a>
-    </ul>
+    <div class="footer-content">
+      <h3>ohmyfood</h3>
+      <ul>
+        <a href="index.html"><li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li></a>
+        <a href="index.html"><li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li></a>
+        <a href="#"><li>Mentions légales</li></a>
+        <a href="mailto:bouthorsv@gmail.com"><li>Contact</li></a>
+      </ul>
+    </div>
   </footer>
 </html>

@@ -1,0 +1,196 @@
+/* Parametres base et typo */
+html {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto; }
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  width: 45%;
+  margin: 0 auto;
+  color: #000; }
+
+.restaurant-menu h2 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px; }
+
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 15px; }
+
+/*Header*/
+header {
+  background-color: #ffff;
+  box-shadow: 2px 2px 4px #c9c9c9;
+  height: 70px;
+  z-index: 2000;
+  position: fixed;
+  width: 100%;
+  top: 0; }
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+  text-decoration: none; }
+  .logo h1 {
+    text-align: center;
+    line-height: 70px; }
+
+.no-show {
+  display: none; }
+
+.top-page .location {
+  height: 50px;
+  background-color: #eaeaea;
+  margin-top: 70px; }
+  .top-page .location h3 {
+    width: 35%;
+    margin: 0 auto;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 500; }
+    .top-page .location h3 i {
+      line-height: 50px; }
+.top-page .intro {
+  background-color: #f6f6f6;
+  height: 300px; }
+  .top-page .intro .intro-texts {
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    padding-top: 13%; }
+    .top-page .intro .intro-texts h2 {
+      width: 75%;
+      margin: 0 auto; }
+    .top-page .intro .intro-texts h3 {
+      width: 85%;
+      font-weight: 300;
+      color: #545454;
+      margin: 0 auto;
+      font-size: 17px; }
+    .top-page .intro .intro-texts input {
+      width: 60%;
+      height: 50px;
+      margin: 0 auto;
+      color: #ffff;
+      font-weight: 500;
+      border-radius: 40px;
+      background: #ff79da;
+      background: linear-gradient(176deg, #ff79da 0%, #9356dc 75%);
+      border: none; }
+      .top-page .intro .intro-texts input:hover {
+        opacity: 0.8; }
+
+.how-to-box {
+  height: 500px; }
+
+.how-to {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 22%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+
+.how-to-block {
+  width: 95%;
+  margin: 0 0 0 3%;
+  height: 70px;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px #dedbdb;
+  line-height: 70px; }
+  .how-to-block i {
+    width: 40px;
+    line-height: 70px;
+    color: #707070;
+    font-size: 19px;
+    text-align: center; }
+  .how-to-block:hover {
+    background-color: #f5ecff; }
+    .how-to-block:hover i {
+      color: #9356dc; }
+
+.block-content {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  margin-left: -18px;
+  height: 70px; }
+
+.block-digit {
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  color: #ffff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 14px;
+  margin: auto; }
+
+.block-text {
+  width: 210px;
+  font-weight: 500; }
+
+#restaurants-list {
+  background-color: #f6f6f6;
+  height: 1500px; }
+  #restaurants-list .restaurants-title {
+    width: 90%;
+    margin: 10% auto 5% auto; }
+
+.food-cards {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%; }
+
+.restaurant-card {
+  height: 270px; }
+  .restaurant-card .restaurant-picture {
+    height: 190px; }
+    .restaurant-card .restaurant-picture img {
+      height: 100%;
+      width: 100%;
+      border-radius: 15px 15px 0 0;
+      object-fit: cover; }
+  .restaurant-card .restaurant-info {
+    height: 80px;
+    background-color: #ffff;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: space-between; }
+    .restaurant-card .restaurant-info .info-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 40px; }
+
+/*# sourceMappingURL=style.css.map */
