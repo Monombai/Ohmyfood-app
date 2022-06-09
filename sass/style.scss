@@ -64,6 +64,10 @@ footer h3 {
     size: 15px;
   }
 }
+a {
+  text-decoration: none;
+  
+}
 
 .button {
   @include degrade;
@@ -172,6 +176,10 @@ header {
   }
   a {
     text-decoration: none;
+    color:#000;
+    :visited {
+      color:#000;
+    }
   }
   .logo {
     width: 100%;
@@ -314,6 +322,15 @@ header {
 #restaurants-list {
   background-color: #f6f6f6;
   height: 1200px;
+  a {
+    text-decoration: none;
+      color:#000;
+      :visited {
+        color:#000;
+      }
+    
+  }
+ 
   .restaurants-title {
     width: 20%;
     margin: 10% 0 5% 5%;

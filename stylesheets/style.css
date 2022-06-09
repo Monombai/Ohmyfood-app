@@ -29,6 +29,9 @@ footer h3 {
   font-family: "Shrikhand", sans-serif;
   font-size: 15px; }
 
+a {
+  text-decoration: none; }
+
 .button {
   background: #ff79da;
   background: -webkit-linear-gradient(#ff79da 0%, #9356dc 75%);
@@ -125,7 +128,10 @@ header {
     left: 0;
     color: #000; }
   .header-content a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #000; }
+    .header-content a :visited {
+      color: #000; }
   .header-content .logo {
     width: 100%; }
   .header-content h1 {
@@ -239,6 +245,11 @@ header {
 #restaurants-list {
   background-color: #f6f6f6;
   height: 1200px; }
+  #restaurants-list a {
+    text-decoration: none;
+    color: #000; }
+    #restaurants-list a :visited {
+      color: #000; }
   #restaurants-list .restaurants-title {
     width: 20%;
     margin: 10% 0 5% 5%; }
