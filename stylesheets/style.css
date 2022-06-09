@@ -9,47 +9,6 @@ body {
   box-sizing: border-box;
   width: 100%; }
 
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px; }
-
-.restaurant-menu h2 {
-  color: #ffff;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 18px; }
-
-.restaurant-name h2 {
-  color: #000; }
-
-footer h3 {
-  font-family: "Shrikhand", sans-serif;
-  font-size: 15px; }
-
-a {
-  text-decoration: none; }
-
-.button {
-  background: #ff79da;
-  background: -webkit-linear-gradient(#ff79da 0%, #9356dc 75%);
-  box-shadow: 0 4px 10px #dedbdb;
-  width: 60%;
-  height: 50px;
-  margin: 0 auto;
-  color: #ffff;
-  font-weight: 500;
-  border-radius: 40px;
-  border: none;
-  text-decoration: none;
-  line-height: 50px;
-  text-align: center; }
-  .button:hover {
-    opacity: 0.8;
-    box-shadow: 0 4px 10px #9b9999; }
-
 /*Loading Spinner*/
 .loader-container {
   display: flex;
@@ -96,7 +55,7 @@ a {
   border-top-color: #99e2d0;
   border-bottom-color: #ff79da;
   border-radius: 50%;
-  animation: loading 0.7s infinite ease-out;
+  animation: loading 0.3s infinite ease-out;
   animation-duration: 3s;
   text-align: center; }
 
@@ -105,6 +64,47 @@ a {
     transform: rotate(0turn); }
   to {
     transform: rotate(4turn); } }
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px; }
+
+.restaurant-menu h2 {
+  color: #ffff;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px; }
+
+.restaurant-name h2 {
+  color: #000; }
+
+footer h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 15px; }
+
+a {
+  text-decoration: none; }
+
+.button {
+  background: #ff79da;
+  background: -webkit-linear-gradient(#ff79da 0%, #9356dc 75%);
+  box-shadow: 0 4px 10px #dedbdb;
+  width: 60%;
+  height: 50px;
+  margin: 0 auto;
+  color: #ffff;
+  font-weight: 500;
+  border-radius: 40px;
+  border: none;
+  text-decoration: none;
+  line-height: 50px;
+  text-align: center; }
+  .button:hover {
+    opacity: 0.8;
+    box-shadow: 0 4px 10px #9b9999; }
+
 /*Header, commun à toutes les pages*/
 header {
   background-color: #ffff;
