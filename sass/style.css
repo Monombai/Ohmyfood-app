@@ -37,7 +37,7 @@ footer h3 {
   font-size: 15px;
 }
 
-input {
+.button {
   background: #ff79da;
   background: -webkit-linear-gradient(#ff79da 0%, #9356dc 75%);
   -webkit-box-shadow: 0 4px 10px #dedbdb;
@@ -51,7 +51,7 @@ input {
   border: none;
 }
 
-input:hover {
+.button:hover {
   opacity: 0.8;
   -webkit-box-shadow: 0 4px 10px #9b9999;
           box-shadow: 0 4px 10px #9b9999;
@@ -561,7 +561,7 @@ header {
           justify-content: space-between;
 }
 
-.restaurants-section input {
+.restaurants-section .button {
   margin: 20%;
 }
 
@@ -645,8 +645,8 @@ header {
     opacity: 0.8;
   }
   100% {
-    -webkit-transform: traslateY(0);
-            transform: traslateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -667,8 +667,8 @@ header {
     opacity: 0.8;
   }
   100% {
-    -webkit-transform: traslateY(0);
-            transform: traslateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
@@ -885,7 +885,7 @@ footer .footer-content a i {
   .top-page .intro .intro-texts h3 {
     width: 90%;
   }
-  .top-page .intro .intro-texts input {
+  .top-page .intro .intro-texts .button {
     width: 240px;
     margin: 0 0 0 5%;
   }

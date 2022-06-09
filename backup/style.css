@@ -90,7 +90,7 @@ header {
       color: #545454;
       margin: 0 auto;
       font-size: 17px; }
-    .top-page .intro .intro-texts input {
+    .top-page .intro .intro-texts .button {
       width: 60%;
       height: 50px;
       margin: 0 auto;
@@ -100,7 +100,7 @@ header {
       background: $secondary;
       background: linear-gradient(176deg, $secondary 0%, $primary 75%);
       border: none; }
-      .top-page .intro .intro-texts input:hover {
+      .top-page .intro .intro-texts .button:hover {
         opacity: 0.8; }
 
 .how-to-box {
