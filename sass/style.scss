@@ -36,10 +36,16 @@ body {
 }
 
 /*Loading Spinner*/
+
 .loader-container {
   display: flex;
   flex-direction: column;
+  animation: fadeout 0.2s;
+  animation-duration: 3s;
+  z-index: 3000;
 }
+ 
+ 
 .loader-text {
   position: fixed;
   top: -1%;
@@ -68,24 +74,46 @@ body {
   background: #ffff;
   transition: opacity 3s, visibility 3s;
   z-index: 3000;
+   
 }
 
 .loader--hidden {
   opacity: 0.7;
-  visibility: hidden;
+   z-index: 3000;
+   visibility: hidden;
+   animation: fadeout 0.2s;
+   animation-duration: 3s;
 }
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0.7;
+    visibility: hidden;
+  }
+}
+
 
 .loader::after {
   content: "";
+  opacity: 1;
   width: 100px;
   height: 100px;
   border: 15px solid #dddddd;
   border-top-color: $third;
   border-bottom-color: $secondary;
   border-radius: 50%;
-  animation: loading 0.3s infinite ease-out;
+  animation: loading 0.3s infinite;
   animation-duration: 3s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
   text-align: center;
+  z-index: 3000;
 }
 
 @keyframes loading {
@@ -95,7 +123,7 @@ body {
   to {
     transform: rotate(4turn);
   }
-}
+}  
 
 main {
   display: flex;
@@ -156,10 +184,24 @@ a {
 header {
   background-color: #ffff;
   height: 70px;
-  z-index: 2000;
+  z-index: 1;
   position: fixed;
   width: 100%;
   top: 0;
+  animation: fadein 0s;
+  animation-duration: 2.5s;
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+  
 }
 .home-header {
   box-shadow: 2px 2px 4px #c9c9c9;
