@@ -1,10 +1,4 @@
 /* Parametres base et typo */
-html {
-  font: {
-    family: "Roboto", sans-serif;
-    size: 16px;
-  }
-}
 
 @mixin degrade {
   background: rgb(255, 121, 218);
@@ -23,6 +17,12 @@ html {
 }
 
 $white: #ffff;
+$primary: #9356dc;
+$secondary: #ff79da;
+$third: #99e2d0;
+
+$logo-texts: "Shrikhand", sans-serif;
+$other-texts: "Roboto", sans-serif;
 
 * {
   margin: 0;
@@ -40,11 +40,15 @@ main {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  font: {
+    family: $other-texts;
+    size: 16px;
+  }
 }
 
 .restaurant-menu h2 {
   font: {
-    family: "Shrikhand", sans-serif;
+    family: $logo-texts;
     size: 18px;
     color: $white;
   }
@@ -52,7 +56,7 @@ main {
 
 footer h3 {
   font: {
-    family: "Shrikhand", sans-serif;
+    family: $logo-texts;
     size: 15px;
   }
 }
@@ -73,6 +77,68 @@ input {
   }
 }
 
+/*Loading Spinner*/
+.loader-container {
+  display: flex;
+  flex-direction: column;
+}
+.loader-text {
+  position: fixed;
+  top: -1%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 15px;
+  font-family: $logo-texts;
+  color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffff;
+  transition: opacity 3s, visibility 3s;
+  z-index: 3000;
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffff;
+  transition: opacity 3s, visibility 3s;
+  z-index: 3000;
+}
+
+.loader--hidden {
+  opacity: 0.7;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 100px;
+  height: 100px;
+  border: 15px solid #dddddd;
+  border-top-color: $third;
+  border-bottom-color: $secondary;
+  border-radius: 50%;
+  animation: loading 0.7s infinite ease-out;
+  animation-duration: 3s;
+  text-align: center;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(4turn);
+  }
+}
+
 /*Header, commun à toutes les pages*/
 
 header {
@@ -82,9 +148,9 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
-  .home-header {
-    box-shadow: 2px 2px 4px #c9c9c9;
-  }
+}
+.home-header {
+  box-shadow: 2px 2px 4px #c9c9c9;
 }
 .header-content {
   display: flex;
@@ -100,22 +166,25 @@ header {
   a {
     text-decoration: none;
   }
+  .logo {
+    width: 100%;
+  }
   h1 {
     line-height: 70px;
     top: 0;
     width: 210px;
-    margin: 0 auto 0 23%;
+    margin: 0 auto;
     text-align: center;
     text-decoration: none;
 
     font: {
-      family: "Shrikhand", sans-serif;
+      family: $logo-texts;
       size: 28px;
     }
     color: #000;
   }
   .no-show {
-    color: $white;
+    display: none;
   }
 }
 
@@ -167,7 +236,7 @@ header {
   }
 }
 .how-to-box {
-  height: 500px;
+  height: 550px;
 }
 
 .how-to {
@@ -178,8 +247,16 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  .steps-blocks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+  }
 }
+
 .how-to-block {
+  display: flex;
   width: 95%;
   margin: 0 0 0 3%;
   height: 70px;
@@ -197,22 +274,20 @@ header {
   &:hover {
     background-color: #f5ecff;
     i {
-      color: #9356dc;
+      color: $primary;
     }
   }
 }
 
 .block-content {
   display: flex;
-  justify-content: space-between;
   width: 90%;
   margin: 0 auto;
-  margin-left: -18px;
   height: 70px;
 }
 
 .block-digit {
-  background-color: #9356dc;
+  background-color: $primary;
   border-radius: 50%;
   width: 25px;
   height: 25px;
@@ -221,7 +296,7 @@ header {
   justify-content: center;
   display: flex;
   font-size: 14px;
-  margin: auto;
+  margin: 22.5px 0 0 -10px;
 }
 
 .block-text {
@@ -233,8 +308,8 @@ header {
   background-color: #f6f6f6;
   height: 1200px;
   .restaurants-title {
-    width: 90%;
-    margin: 10% auto 5% auto;
+    width: 20%;
+    margin: 10% 0 5% 5%;
   }
 }
 
@@ -246,21 +321,6 @@ header {
   justify-content: space-between;
   height: 88%;
 }
-
-
-/*
-&:hover {
-  font-weight: 900;
-  background-size: 100%;
-  transition: 3000ms;
-  color: #9356dc;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-*/ 
-
-
 
 .restaurant-card {
   height: 23%;
@@ -283,7 +343,7 @@ header {
       width: 90%;
       margin: auto;
       i {
-        line-height: 80px;
+        margin: 6% 0;
         font-size: 22px;
       }
       .info-text {
@@ -302,38 +362,63 @@ header {
     }
   }
 }
- 
- 
+
+.new-restaurant {
+  position: absolute;
+  width: 15%;
+  padding: 1.5%;
+  font-size: 12px;
+  font-weight: 600;
+  right: 10%;
+  margin-top: 5%;
+  text-align: center;
+  background-color: $third;
+  color: #3b7b6b;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
 
 .hearts {
   font-size: 29px;
   line-height: 80px;
-  transition: all 5s;
-  
+
   .heart-empty {
     position: absolute;
     right: 10%;
+    transition: 1s ease-in-out;
   }
   .heart-full {
     position: absolute;
+    transition: 1s ease-in;
     right: 10%;
-    height: 0;
+    visibility: hidden;
+    opacity: 0;
     color: transparent;
-    /*background: -webkit-linear-gradient(#9356dc, #ff79da);
+    background: -webkit-linear-gradient($primary, $secondary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
+    -webkit-text-fill-color: transparent;
   }
   &:hover {
-    
     .heart-empty {
-      height: 0;
+      opacity: 0;
+      visibility: hidden;
     }
     .heart-full {
-      height: 100%;
-      color: #9356dc;
+      visibility: visible;
+      opacity: 1;
     }
   }
-
 }
 
 /*Pages Restaurant*/
@@ -357,7 +442,7 @@ header {
   flex-direction: column;
   justify-content: space-between;
   input {
-    margin: 20%
+    margin: 20%;
   }
 }
 .restaurant-menu {
@@ -373,10 +458,8 @@ header {
     h2 {
       font-size: 27px;
     }
-
   }
 }
-
 
 /*Catégories du Menu*/
 
@@ -384,7 +467,7 @@ header {
   margin-top: 10%;
   height: fit-content;
   .menu-category {
-    width: 120px;
+    width: 100%;
     h3 {
       font-weight: 300;
     }
@@ -395,41 +478,127 @@ header {
     position: absolute;
     padding-bottom: 5px;
     width: 45px;
-    border-bottom: 3px solid #99e2d0;
+    border-bottom: 3px solid $third;
   }
 }
 
+/*Chargement progressif des menus*/
+.starters {
+  animation: show-meals 2s ease;
+}
+.main-courses {
+  animation: show-meals 3s ease;
+}
+.desserts {
+  animation: show-meals 4s ease;
+}
+
+@keyframes show-meals {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0.4;
+  }
+
+  90% {
+    opacity: 0.6;
+  }
+  95% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: traslateY(0);
+    opacity: 1;
+  }
+}
+
+/* Cartes de plats + animation au survol*/
 .meal-container {
   margin-top: 7%;
   background-color: $white;
   height: fit-content;
   border-radius: 15px;
   @include shadows;
-  h4 {
-    font-size: 18px;
-    width: 80%;
-    margin: 0 5%;
-    flex-wrap: wrap;
-    padding: 3.5% 0 2% 0;
-  }
-  .meal-d-and-p {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+
+  .meal-left {
     width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
-    padding: 0 0 3.5% 0;
-    h5 {
-      font-weight: 300;
-      font-size: 15px;
-      width: 87%;
-      white-space: nowrap;
-      overflow:hidden;
-      text-overflow: ellipsis;
+    margin: 2% auto;
+    h4 {
+      font-size: 18px;
+      width: 100%;
+      margin: 0 0 2% 0;
+      flex-wrap: wrap;
     }
- 
-    .meal-price {
-      font-size: 15px;
-      font-weight: 600;
+    .meal-d-and-p {
+      display: flex;
+      width: 100%;
+      margin: 0;
+      justify-content: space-between;
+      h5 {
+        font-weight: 300;
+        font-size: 15px;
+        width: 87%;
+        left: 5%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .meal-price {
+        font-size: 15px;
+        font-weight: 600;
+      }
+    }
+  }
+  .meal-right {
+    width: 0;
+    display: flex;
+    background-color: $third;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 15px 15px 0;
+
+    i {
+      color: #ffff;
+      font-size: 20px;
+      display: none;
+    }
+  }
+  &:hover {
+    .meal-left {
+      width: 80%;
+      transition: all 0.3s ease-in-out;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin: 2% 5%;
+      h4 {
+        width: 100%;
+        margin: 0 0 3% 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+    .meal-right {
+      width: 20%;
+      transition: all 0.3s ease-in-out;
+      i {
+        display: inline;
+        animation: spin 0.5s linear;
+      }
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
   }
 }
@@ -439,6 +608,7 @@ footer {
   color: $white;
   background-color: #353535;
   height: fit-content;
+  font-family: $other-texts;
   .footer-content {
     width: 90%;
     display: flex;
@@ -466,6 +636,299 @@ footer {
       i {
         margin-right: 3%;
       }
+    }
+  }
+}
+@media screen and (min-width: 767px) {
+  .header-content {
+    width: 90%;
+    i {
+      margin-right: 15px;
+    }
+    h1 {
+      margin: 0 0 0 -4%;
+    }
+  }
+  /*Media Query Page d'accueil*/
+  .top-page {
+    .location {
+      width: 20%;
+      min-width: 210px;
+      margin: 85px auto 0 auto;
+      border-radius: 20px;
+      h3 {
+        width: 50%;
+        min-width: 120px;
+      }
+    }
+    .intro {
+      width: 90%;
+      height: 250px;
+      margin: 5% auto;
+      border-radius: 20px;
+
+      .intro-texts {
+        padding: 3% 0;
+        text-align: left;
+        h2,
+        h3 {
+          width: 90%;
+        }
+        input {
+          width: 240px;
+          margin: 0 0 0 5%;
+        }
+      }
+    }
+
+    .how-to-box {
+      height: 250px;
+      width: 90%;
+      margin: 0 auto;
+      .how-to {
+        height: 80%;
+        padding: 0;
+        .how-to-block {
+          width: 50%;
+          margin: 0;
+          height: 50px;
+          line-height: 50px;
+          .block-digit {
+            margin-top: 12.5px;
+          }
+          .block-content {
+            height: 50px;
+            .block-text {
+              font-size: 18px;
+            }
+          }
+          i {
+            line-height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  #restaurants-list {
+    height: 900px;
+
+    .restaurants-title {
+      margin: 2% 0 2% 10%;
+    }
+    .food-cards {
+      width: 90%;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .restaurant-card {
+      height: 45%;
+      width: 48%;
+      .restaurant-info {
+        .info-content {
+          i {
+            margin: 0 0 0 -3%;
+            font-size: 30px;
+            line-height: 400%;
+            right: auto;
+          }
+        }
+        .info-text {
+          margin: 0;
+
+          h3 {
+            line-height: 300%;
+            font-size: 25px;
+          }
+          h4 {
+            line-height: 0;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .new-restaurant {
+    width: 10%;
+    font-size: 16px;
+    padding: 0.5%;
+    margin: 2% 0 0 -14%;
+    right: auto;
+  }
+
+  /*Media Query Pages Restaurants*/
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+  }
+  .restaurant-main {
+    height: 90%;
+  }
+
+  .restaurant-picture-top {
+    height: 100%;
+
+    width: 100%;
+    margin-top: 0;
+    img {
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+  .restaurant-menu {
+    height: 90%;
+    margin: auto;
+    .restaurant-name {
+      margin-top: 0;
+    }
+  }
+  .restaurants-section {
+    top: 11%;
+    margin: 0 5%;
+    position: absolute;
+    border-radius: 40px;
+    width: 90%;
+    height: 75%;
+
+    input {
+      margin: 20px 40%;
+      width: 20%;
+      @media screen and (min-width: 767px) and (max-height: 700px) {
+        margin: 10px 40%;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 767px) and (max-height: 865px) {
+    input {
+      height: 35px;
+    }
+    
+  }
+
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 29%;
+    width: 100%;
+    margin: auto;
+  }
+  .meal-container {
+    margin: auto 2.5%;
+    width: 45%;
+    .meal-left {
+      h4 {
+        font-size: 16px;
+        @media screen and (min-width: 767px) and (max-height: 700px) {
+          font-size: 14px;
+        }
+      }
+      .meal-d-and-p {
+        h5 {
+          font-size: 14px;
+          @media screen and (min-width: 767px) and (max-height: 700px) {
+            font-size: 13px;
+          }
+        }
+        .meal-price {
+          font-size: 14px;
+          @media screen and (min-width: 767px) and (max-height: 700px) {
+            font-size: 13px;
+          }
+
+        }
+      }
+    }
+    .meal-right {
+      i {
+        font-size: 15px;
+      }
+    }
+  }
+
+  /*Media Query Footer*/
+
+  footer {
+    height: 150px;
+
+    .footer-content {
+      width: 90%;
+      height: 60%;
+      h3 {
+        margin: 2% 0 0 0;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        height: 90%;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
+        font-size: 15px;
+        a {
+          width: 25%;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    /*Media Query Page d'accueil*/
+    .top-page {
+      .intro {
+        width: 70%;
+      }
+      .how-to-box {
+        width: 70%;
+        .steps-blocks {
+          flex-direction: row;
+          align-items: center;
+        }
+        .how-to {
+          .how-to-block {
+            width: 30%;
+            .block-content {
+              .block-text {
+                font-size: 12px;
+                @media screen and (min-width: 1272px) {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-content {
+      i {
+        margin-right: 0;
+      }
+      h1 {
+        margin: 0;
+      }
+    }
+    #restaurants-list {
+      .restaurants-title {
+        margin-left: 18.5%;
+      }
+      .food-cards {
+        width: 70%;
+      }
+    }
+    .new-restaurant {
+      width: 5%;
+      min-width: 65px;
+      margin: 1% 0 0 -8%;
+    }
+  }
+  @media screen and (min-width: 1800px) {
+    #restaurants-list {
+      height: 1100px;
     }
   }
 }

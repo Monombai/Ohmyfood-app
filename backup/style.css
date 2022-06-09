@@ -19,18 +19,18 @@ main {
   margin: 0 auto; }
 
 h1 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: logo-text
   font-size: 28px;
   width: 45%;
   margin: 0 auto;
   color: #000; }
 
 .restaurant-menu h2 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: logo-text
   font-size: 18px; }
 
 footer h3 {
-  font-family: "Shrikhand", sans-serif;
+  font-family: logo-text
   font-size: 15px; }
 
 /*Header*/
@@ -97,8 +97,8 @@ header {
       color: #ffff;
       font-weight: 500;
       border-radius: 40px;
-      background: #ff79da;
-      background: linear-gradient(176deg, #ff79da 0%, #9356dc 75%);
+      background: $secondary;
+      background: linear-gradient(176deg, $secondary 0%, $primary 75%);
       border: none; }
       .top-page .intro .intro-texts input:hover {
         opacity: 0.8; }
@@ -132,7 +132,7 @@ header {
   .how-to-block:hover {
     background-color: #f5ecff; }
     .how-to-block:hover i {
-      color: #9356dc; }
+      color: $primary; }
 
 .block-content {
   display: flex;
@@ -143,7 +143,7 @@ header {
   height: 70px; }
 
 .block-digit {
-  background-color: #9356dc;
+  background-color: $primary;
   border-radius: 50%;
   width: 25px;
   height: 25px;
