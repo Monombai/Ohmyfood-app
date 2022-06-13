@@ -188,9 +188,15 @@ header {
   position: fixed;
   width: 100%;
   top: 0;
+}
+
+.home-header {
+  box-shadow: 2px 2px 4px #c9c9c9;
   animation: fadein 0s;
   animation-duration: 2.5s;
 }
+
+
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -203,9 +209,7 @@ header {
   }
   
 }
-.home-header {
-  box-shadow: 2px 2px 4px #c9c9c9;
-}
+
 .header-content {
   display: flex;
   justify-content: left;
@@ -824,127 +828,6 @@ footer {
     right: auto;
   }
 
-  /*Media Query Pages Restaurants*/
-  html {
-    height: 100%;
-  }
-  body {
-    height: 100%;
-  }
-  .restaurant-main {
-    height: 90%;
-  }
-
-  .restaurant-picture-top {
-    height: 100%;
-
-    width: 100%;
-    margin-top: 0;
-    img {
-      height: 100%;
-
-      object-fit: cover;
-    }
-  }
-  .restaurant-menu {
-    height: 90%;
-    margin: auto;
-    .restaurant-name {
-      margin-top: 0;
-    }
-  }
-  .restaurants-section {
-    top: 11%;
-    margin: 0 5%;
-    position: absolute;
-    border-radius: 40px;
-    width: 90%;
-    height: 75%;
-
-    .button {
-      margin: 20px 40%;
-      width: 20%;
-      @media screen and (min-width: 767px) and (max-height: 700px) {
-        margin: 10px 40%;
-      }
-    }
-
-  }
-
-  @media screen and (min-width: 767px) and (max-height: 865px) {
-    .button {
-      height: 35px;
-      line-height: 35px;
-    }
-    
-  }
-
-  .category-container {
-    display: flex;
-    flex-wrap: wrap;
-    height: 29%;
-    width: 100%;
-    margin: auto;
-  }
-  .meal-container {
-    margin: auto 2.5%;
-    width: 45%;
-    .meal-left {
-      h4 {
-        font-size: 16px;
-        @media screen and (min-width: 767px) and (max-height: 700px) {
-          font-size: 14px;
-        }
-      }
-      .meal-d-and-p {
-        h5 {
-          font-size: 14px;
-          @media screen and (min-width: 767px) and (max-height: 700px) {
-            font-size: 13px;
-          }
-        }
-        .meal-price {
-          font-size: 14px;
-          @media screen and (min-width: 767px) and (max-height: 700px) {
-            font-size: 13px;
-          }
-
-        }
-      }
-    }
-    .meal-right {
-      i {
-        font-size: 15px;
-      }
-    }
-  }
-
-  /*Media Query Footer*/
-
-  footer {
-    height: 150px;
-
-    .footer-content {
-      width: 90%;
-      height: 60%;
-      h3 {
-        margin: 2% 0 0 0;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-        height: 90%;
-        width: 100%;
-        text-align: center;
-        padding: 0;
-        margin-top: 0;
-        font-size: 15px;
-        a {
-          width: 25%;
-        }
-      }
-    }
-  }
   @media screen and (min-width: 992px) {
     /*Media Query Page d'accueil*/
     .top-page {
@@ -999,4 +882,136 @@ footer {
       height: 1100px;
     }
   }
+
+  /*Media Query Pages Restaurants*/
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+  }
+  .restaurant-main {
+    height: 1250px;
+    @media screen and (min-width: 992px) {
+      height: 1500px;
+    }
+  }
+
+  .restaurant-picture-top {
+    height: 100%;
+
+    width: 100%;
+    margin-top: 0;
+    img {
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+  .restaurant-menu {
+    height: 90%;
+    margin: auto;
+    .restaurant-name {
+      margin-top: 0;
+    }
+  }
+
+  
+  .restaurants-section {
+    top: 130px;
+    margin: 0 5%;
+    position: absolute;
+    border-radius: 40px;
+    width: 90%;
+    height: 1000px;
+    @media screen and (min-width: 992px) {
+      height: 1200px;
+    }
+
+    .button {
+      margin: 20px 40%;
+      width: 20%;
+    }
+
+  }
+
+  
+  .category-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 29%;
+    width: 100%;
+    margin: auto;
+    .menu-category {
+      margin-top: 30px;
+    }
+  }
+  .meal-container {
+    margin: auto 2.5%;
+    width: 45%;
+    .meal-left {
+      h4 {
+        font-size: 18px;
+        @media screen and (max-width: 992px) {
+          font-size: 15px;
+        }
+      }
+      .meal-d-and-p {
+        h5 {
+          font-size: 16px;
+          @media screen and (max-width: 992px)  {
+            font-size: 14px;
+          }
+        }
+        .meal-price {
+          font-size: 16px;
+          @media screen and (max-width: 992px)  {
+            font-size: 14px;
+          }
+
+        }
+      }
+    }
+    .meal-right {
+      i {
+        font-size: 20px;
+        @media screen and (max-width: 992px)  {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  /*Media Query Footer*/
+
+  footer {
+    height: 150px;
+
+    .footer-content {
+      width: 100%;
+      height: 60%;
+      h3 {
+        margin: 30px auto 0 auto;
+        width: 90%;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        height: 90%;
+        width: 90%;
+        text-align: center;
+        padding: 0;
+        margin: 0 auto;
+        font-size: 15px;
+        a {
+          width: 25%;
+        }
+        li {
+          margin-top: 30px;
+          width: 190px;
+        }
+      }
+    }
+  }
+
 }
