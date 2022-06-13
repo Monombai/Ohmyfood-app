@@ -828,59 +828,59 @@ footer {
     right: auto;
   }
 
-  @media screen and (min-width: 992px) {
-    /*Media Query Page d'accueil*/
-    .top-page {
-      .intro {
-        width: 70%;
-      }
-      .how-to-box {
-        width: 70%;
-        .steps-blocks {
-          flex-direction: row;
-          align-items: center;
+    @media screen and (min-width: 992px) {
+      /*Media Query Page d'accueil*/
+      .top-page {
+        .intro {
+          width: 70%;
         }
-        .how-to {
-          .how-to-block {
-            width: 30%;
-            .block-content {
-              .block-text {
-                font-size: 12px;
-                @media screen and (min-width: 1272px) {
-                  font-size: 16px;
+        .how-to-box {
+          width: 70%;
+          .steps-blocks {
+            flex-direction: row;
+            align-items: center;
+          }
+          .how-to {
+            .how-to-block {
+              width: 30%;
+              .block-content {
+                .block-text {
+                  font-size: 12px;
+                  @media screen and (min-width: 1272px) {
+                    font-size: 16px;
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-    .header-content {
-      i {
-        margin-right: 0;
+      .header-content {
+        i {
+          margin-right: 0;
+        }
+        h1 {
+          margin: 0;
+        }
       }
-      h1 {
-        margin: 0;
+      #restaurants-list {
+        .restaurants-title {
+          margin-left: 18.5%;
+        }
+        .food-cards {
+          width: 70%;
+        }
+      }
+      .new-restaurant {
+        width: 5%;
+        min-width: 65px;
+        margin: 1% 0 0 -8%;
       }
     }
-    #restaurants-list {
-      .restaurants-title {
-        margin-left: 18.5%;
+    @media screen and (min-width: 1800px) {
+      #restaurants-list {
+        height: 1100px;
       }
-      .food-cards {
-        width: 70%;
-      }
-    }
-    .new-restaurant {
-      width: 5%;
-      min-width: 65px;
-      margin: 1% 0 0 -8%;
-    }
-  }
-  @media screen and (min-width: 1800px) {
-    #restaurants-list {
-      height: 1100px;
-    }
   }
 
   /*Media Query Pages Restaurants*/
@@ -918,7 +918,7 @@ footer {
 
   
   .restaurants-section {
-    top: 130px;
+    top: 135px;
     margin: 0 5%;
     position: absolute;
     border-radius: 40px;
